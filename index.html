@@ -1,114 +1,166 @@
-<!-- 
-	Name: Twitter style vertical Ticker.
-	Description: Twitter style vertical Ticker.
-	Version : 1.00
-	Author: Linesh Jose
-	Url: http://lineshjose.com
-	Email: lineshjose@gmail.com
-	Donate:  http://bit.ly/donate-linesh
-	github: https://github.com/lineshjose
-	Demo: http://www.lineshjose.com/blog/twitter-style-vertical-scrolling/
-	Copyright: Copyright (c) 2011 LineshJose.com
-	
-	Note: This script is free; you can redistribute it and/or modify  it under the terms of the GNU General Public License as published by 	the Free Software Foundation; either version 2 of the License, or (at your option) any later version.This script is distributed in the hope 	that it will be useful,    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the  GNU General Public License for more details.
-
--->
-
-<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<title>Twitter style vertical Scrolling by - www.lineshjose.com</title>
-<!-- jQuery UI widget factory --> 
-<script src="./jquery.js" type="text/javascript"></script>
-<script src="./jquery.vticker-min.js" type="text/javascript"></script>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Linesh Jose http://linesh.com/" />
+<title>Twitter style vertical Scrolling</title>
 <style>
-body {text-align: center;margin:0; padding:0; color:#000; font-family: "Times, serif", "Helvetica" , "Arial";font-size:12px;background: #C0DEED url('http://a3.twimg.com/a/1298572289/images/bg-clouds.png') repeat-x; }
-div#container{width:700px;position: relative;margin-top: 0px;margin-left: auto;margin-right: auto;text-align:left;font-size:12px; }
-h1{padding:30px;color:#FFF;}
-#tweet_cont{padding:50px ; }
-#tweet_cont ul {margin:0;padding:0;list-style:none; }
-#tweet_cont ul .tweet {background: #fff; margin-bottom:3px;clear:both;text-align:left; padding:3px;width:590px; }
-#tweet_cont ul .tweet .avatar{float:left;width:48px;height:48px;margin:0px 5px 0px 0px; border:none;} 
-#tweet_cont ul .tweet  h4{margin:0px 0px 0px 0px; font-size:14px; margin:0;padding:0;font-family:arial; }
-#tweet_cont ul .tweet   small{padding-left:50px; font-size:13px; margin:0;padding:0;font-family:arial; font-weight:normal;}
-.clearboth {clear: both;}
-a {color:#3E76C2;text-decoration:none;}
-a:hover {text-decoration:underline;}
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: "Times, serif", "Helvetica", "Arial";
+	font-size: 15px;
+	background: #DAE9F3;
+}
+h1 {
+	padding: 25px;
+	color: #000;
+	font-size: 21px;
+	background: #fff;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.clear {
+	float: none;
+	clear: both;
+}
+.button {
+	background: #217EBF;
+	padding: 5px;
+	border: none;
+	border-radius: 20px;
+	color: #fff;
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 13px;
+	    text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+div#container {
+	width: 500px;
+	position: relative;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 12px;
+}
+div#container  h2{
+	text-align:center;
+	margin-bottom:15px;	
+	text-transform:uppercase;
+}
+#tweets {
+	margin-bottom:25px;	
+	background:#fff;
+	box-shadow:0 0 50px 1px rgba(0, 0, 0, 0.38)
+}
+
+#tweets ul {
+	clear: both;
+	text-align: left;
+	list-style:none;
+}
+#tweets ul li{
+	padding:10px !important;
+	background:#fff;
+	display:block;
+	border-bottom:1px solid #eee;
+}
+#tweets ul li img.avatar{
+	float:left;
+	width:40px;
+	height:40px;
+}
+#tweets ul li h4{
+	margin: 0 0px 0 50px;
+	font-size: 15px;
+    text-transform: capitalize;
+}
+#tweets ul li h4 a{
+	text-decoration: none;
+    color: #007EBF;
+}
+#tweets ul li h4 span{
+	display:block;
+	font-size:13px;
+	color:#555;
+	margin-top:5px;	
+	font-weight:normal;
+}
 </style>
-
-
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./jquery.vticker-min.js" type="text/javascript"></script>
 <script type="text/javascript"> 
 $(function(){
-	$('.tweets').vTicker({ 
+	$('#tweets').vTicker({ 
 		speed: 500,
 		pause: 3000,
 		animation: 'fade',
 		mousePause: true,
-		showItems: 10,
+		showItems: 5,
 		direction: 'down',
-		height:228
+		height:290
 	});
 });
 </script>
-
 </head>
 <body >
+<h1>Twitter style vertical Scrolling.</h1>
 <div id="container">
-<h1>Twitter style vertical Ticker by - www.lineshjose.com</h1>
+  <h2>Top Tweets</h2>
+  <div id="tweets" >
+    <ul>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+      <li class="tweet"> <a href="http://www.lineshjose.com/" class="link"> <img src="./image.jpg" class="avatar" ></a>
+        <h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a> <span> 1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</span></h4>
+        <div class="clear"></div>
+      </li>
+    </ul>
+  </div>
+  <a href="http://linesh.com/blog/twitter-style-vertical-scrolling-ticker/" target="parent"  class="button"><b>Download this</b></a> <br>
 
-<div id="tweet_cont">
-<h2>Top Tweets</h2>
-<div class="tweets" >
-			<ul>
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small>  1-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-			
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small> 2-Phasellus sollicitudin. Vestibulum condimentum facilisis nulla.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-			
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small> 3-Phasellus sollicitudin. Vestibulum condimentum facilisis nulla.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small> 4-Phasellus sollicitudin. Vestibulum condimentum facilisis nulla.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small> 5-Phasellus sollicitudin. Vestibulum condimentum facilisis nulla.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-			
-			<li>
-				<div class="tweet">
-					<a href="http://www.lineshjose.com/" class="link"><img src="http://0.gravatar.com/avatar/2a8f038da783fb57d793735a5ce90f5d?s=40&d=identicon&r=G" class="avatar" ></a>
-					<h4><a href="http://www.lineshjose.com/" class="link">Linesh Jose</a><small> 6-Phasellus sollicitudin. Vestibulum condimentum facilisis nulla.</small></h4>
-					<div class="clearboth"></div>
-				</div>
-			</li>
-		</ul>
-</div>
-</div>
-
-<a href="http://www.lineshjose.com/blog/twitter-style-vertical-scrolling/" target="parent" ><b>Download this</b></a>
 </div>
 </body>
 </html>
