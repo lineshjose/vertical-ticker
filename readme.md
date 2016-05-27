@@ -7,15 +7,13 @@ Version : 1.00
 
 Author: Linesh Jose
 
-Url: http://lineshjose.com
+Url: http://linesh.com/
 
 Email: lineshjose@gmail.com
 
-Donate:  http://bit.ly/donate-linesh
+Donate:  http://linesh.com/make-a-donation/
 
 github: https://github.com/lineshjose
-
-Demo: http://www.lineshjose.com/blog/twitter-style-vertical-scrolling/
 
 Copyright: Copyright (c) 2011 LineshJose.com
 	
